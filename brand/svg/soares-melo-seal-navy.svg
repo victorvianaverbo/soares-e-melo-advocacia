@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  
+
+  <defs>
+    <path id="top" d="M 42,120 A 78,78 0 0 1 198,120" fill="none"></path>
+    <path id="bot" d="M 44,120 A 76,76 0 0 0 196,120" fill="none"></path>
+  </defs>
+  <circle cx="120" cy="120" r="110" fill="none" stroke="#1A2B5E" stroke-width="0.6" opacity="0.45"></circle>
+  <circle cx="120" cy="120" r="100" fill="none" stroke="#1A2B5E" stroke-width="1.2"></circle>
+  <circle cx="120" cy="120" r="66" fill="none" stroke="#1A2B5E" stroke-width="0.9"></circle>
+  <circle cx="120" cy="120" r="62" fill="none" stroke="#1A2B5E" stroke-width="0.4" opacity="0.5"></circle>
+  <text font-size="11.5" letter-spacing="5" fill="#1A2B5E" font-weight="500">
+    <textPath href="#top" startOffset="50%" text-anchor="middle">SOARES • MELO</textPath>
+  </text>
+  <text class="sans" font-size="8.5" letter-spacing="7" fill="#1A2B5E">
+    <textPath href="#bot" startOffset="50%" text-anchor="middle">ADVOCACIA</textPath>
+  </text>
+  <circle cx="40" cy="120" r="1.8" fill="#1A2B5E"></circle>
+  <circle cx="200" cy="120" r="1.8" fill="#1A2B5E"></circle>
+  <text x="120" y="146" text-anchor="middle" font-size="60" font-weight="500" letter-spacing="-2" fill="#1A2B5E">SM</text>
+
+</svg>
