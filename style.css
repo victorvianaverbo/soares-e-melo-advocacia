@@ -309,7 +309,7 @@ h1, h2, h3, p { margin: 0; }
   font-size: var(--fs-lede);
   line-height: 1.55;
   color: rgba(245,239,224,.78);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .hero__actions {
@@ -434,7 +434,7 @@ h1, h2, h3, p { margin: 0; }
 .areas-list .sep {
   color: rgba(175,143,71,.4);
   font-family: var(--sans);
-  font-weight: 300;
+  font-weight: 400;
 }
 .areas-list a {
   position: relative;
@@ -580,7 +580,7 @@ h1, h2, h3, p { margin: 0; }
   margin-top: 20px;
   max-width: 62ch;
   font-size: var(--fs-lede);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.55;
   color: #555;
 }
@@ -795,7 +795,7 @@ h1, h2, h3, p { margin: 0; }
 }
 .diferencial__body h3 {
   font-family: var(--sans);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(16px, 0.4vw + 14px, 20px);
   letter-spacing: -0.005em;
   line-height: 1.35;
@@ -1140,7 +1140,7 @@ h1, h2, h3, p { margin: 0; }
 }
 .sobre__prose p {
   font-family: var(--sans);
-  font-weight: 300;
+  font-weight: 400;
   font-size: var(--fs-lede);
   line-height: 1.6;
   color: rgba(245,239,224,.82);
@@ -1430,7 +1430,7 @@ h1, h2, h3, p { margin: 0; }
 .faq__toggle {
   justify-self: end;
   font-family: var(--sans);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 24px;
   color: var(--gold);
   transition: transform .35s cubic-bezier(.2,.7,.2,1);
@@ -1556,7 +1556,7 @@ h1, h2, h3, p { margin: 0; }
 }
 .legal-disclaimer {
   font-family: var(--sans);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 11px;
   line-height: 1.65;
   color: rgba(245,239,224,.45);
@@ -1661,13 +1661,18 @@ a:focus-visible { outline-offset: 4px; }
 @media (max-width: 720px) {
   .site-nav { gap: 20px; }
   .site-nav a:not(.site-nav__cta) { display: none; }
-  .brand-mark__hero { height: 44px; }
+  .brand-mark__hero { height: 48px; }
+  .site-header[data-scroll="scrolled"] .brand-mark__hero { height: 40px; }
 
-  .hero { padding: 100px var(--page-pad-x) 30px; }
-  .hero__ordinal { display: none; }
-  .hero__title { letter-spacing: -0.015em; }
+  .hero { padding: 90px var(--page-pad-x) 30px; min-height: auto; }
+  .hero__ordinal { font-size: 9px; margin-bottom: 20px; gap: 8px; }
+  .hero__ordinal .ordinal__year { font-size: 14px; }
+  .hero__title { letter-spacing: -0.015em; max-width: 100%; margin: 20px auto 24px; text-wrap: balance; }
+  .hero__lede { font-size: 16px; }
   .hero__actions { gap: 12px; flex-direction: column; align-items: stretch; }
-  .hero__actions .btn { width: 100%; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+  .hero__index { margin-top: 56px; }
+  .hero__index-kicker { font-size: 9px; letter-spacing: 2px; }
 
   .areas-list { grid-template-columns: 1fr; }
   .areas-list li { padding: 16px 18px; }
