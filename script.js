@@ -180,7 +180,7 @@
       if (!valid) return;
 
       const msg = encodeURIComponent(`Olá, meu nome é ${name} e gostaria de agendar uma consulta gratuita.`);
-      const url = `https://wa.me/5531900000000?text=${msg}`;
+      const url = `https://wa.me/5531971547036?text=${msg}`;
       window.open(url, '_blank', 'noopener');
     });
   }
