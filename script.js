@@ -179,9 +179,25 @@
 
       if (!valid) return;
 
-      const msg = encodeURIComponent(`Olá, meu nome é ${name} e gostaria de agendar uma consulta gratuita.`);
-      const url = `https://wa.me/5531971547036?text=${msg}`;
-      window.open(url, '_blank', 'noopener');
+      const service = form.dataset.service;
+      const baseMsg = service
+        ? `Olá, meu nome é ${name} e gostaria de agendar uma consulta sobre ${service}.`
+        : `Olá, meu nome é ${name} e gostaria de agendar uma consulta gratuita.`;
+      const url = `https://wa.me/5531971547036?text=${encodeURIComponent(baseMsg)}`;
+
+      let opened = false;
+      const open = () => { if (!opened) { opened = true; window.open(url, '_blank', 'noopener'); } };
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          send_to: 'AW-18148697196/9uqmCJ3_tqscEOzI_M1D',
+          value: 1.0,
+          currency: 'BRL',
+          event_callback: open
+        });
+        setTimeout(open, 1200);
+      } else {
+        open();
+      }
     });
   }
 
