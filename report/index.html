@@ -78,6 +78,16 @@
     .tbl-scroll{overflow-x:auto}
     @media(max-width:680px){.tbl{font-size:13px}.tbl thead th,.tbl tbody td,.tbl tfoot td{padding:11px 7px}}
 
+    
+    /* MONTHLY EVOLUTION */
+    .monthly-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px}
+    .month-card{padding:24px;background:linear-gradient(135deg, rgba(255,255,255,.03), transparent);border:1px solid rgba(201,207,221,.1);border-radius:4px;text-align:center}
+    .month-card__title{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .month-card__data{display:flex;flex-direction:column;gap:8px}
+    .month-card__metric{display:flex;justify-content:space-between;align-items:center;font-size:14.5px;color:var(--ivory)}
+    .month-card__metric span{color:var(--mist);font-size:13px}
+    @media(max-width:680px){.monthly-grid{grid-template-columns:1fr}}
+
     /* KEYWORDS */
     .kw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .kw{padding:20px;border:1px solid var(--line);border-radius:4px;background:rgba(255,255,255,.015)}
@@ -195,6 +205,42 @@
 </section>
 
 <hr class="hair" />
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Evolução Mensal</span>
+      <h2>Crescimento e <em>otimização</em>.</h2>
+    </div>
+
+    <div class="monthly-grid">
+      <div class="month-card">
+        <div class="month-card__title">Maio 2026</div>
+        <div class="month-card__data">
+          <div class="month-card__metric"><span>Investido</span> <b>R$ 1.670,00</b></div>
+          <div class="month-card__metric"><span>Contatos</span> <b>59</b></div>
+          <div class="month-card__metric"><span>Custo / Contato</span> <b>R$ 28,30</b></div>
+        </div>
+      </div>
+      <div class="month-card">
+        <div class="month-card__title">Junho 2026</div>
+        <div class="month-card__data">
+          <div class="month-card__metric"><span>Investido</span> <b>R$ 853,91</b></div>
+          <div class="month-card__metric"><span>Contatos</span> <b>53</b></div>
+          <div class="month-card__metric"><span>Custo / Contato</span> <b style="color:var(--gold-soft)">R$ 16,11</b></div>
+        </div>
+      </div>
+      <div class="month-card">
+        <div class="month-card__title">Julho 2026</div>
+        <div class="month-card__data">
+          <div class="month-card__metric"><span>Investido</span> <b>R$ 1.437,68</b></div>
+          <div class="month-card__metric"><span>Contatos</span> <b>84</b></div>
+          <div class="month-card__metric"><span>Custo / Contato</span> <b style="color:var(--gold-soft)">R$ 17,11</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="wrap">
