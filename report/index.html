@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Relatório de Desempenho nº 02 · Soares e Melo Advocacia</title>
+  <meta name="description" content="Relatório de desempenho das campanhas de Google Ads — Soares e Melo Advocacia." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --navy:#0F1E4A; --navy-deep:#0A1538; --ivory:#F5EFE0; --ivory-soft:#FBF8F0;
+      --gold:#AF8F47; --gold-soft:#C9A55D; --mist:#C9CFDD; --ink:#1a1a1a;
+      --serif:'Playfair Display',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+      --line:rgba(201,207,221,.16);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+    body{margin:0;font-family:var(--sans);font-size:16px;line-height:1.65;color:var(--mist);background:var(--navy);overflow-x:hidden}
+    img,svg{display:block;max-width:100%;height:auto}
+    h1,h2,h3,p{margin:0}
+    em{font-style:italic;color:var(--gold-soft)}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+    .kicker{display:inline-flex;align-items:center;gap:14px;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+    .kicker::before{content:"";width:32px;height:1px;background:var(--gold);opacity:.6}
+    .hair{height:1px;background:var(--line);border:0;margin:0}
+
+    /* SWITCH / HISTÓRICO */
+    .report-switch{display:flex;align-items:center;gap:12px;margin-top:30px;flex-wrap:wrap}
+    .report-switch__lbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+    .report-switch select{appearance:none;-webkit-appearance:none;background:rgba(255,255,255,.03);color:var(--ivory);border:1px solid rgba(175,143,71,.35);border-radius:4px;padding:10px 40px 10px 14px;font-family:var(--sans);font-size:14px;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23AF8F47' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center}
+    .report-switch select:focus{outline:none;border-color:var(--gold)}
+    .report-switch option{background:var(--navy-deep);color:var(--ivory)}
+
+    /* HEADER */
+    header.rep{padding:clamp(40px,7vw,72px) 0 0}
+    .rep__top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+    .rep__top img{width:200px;opacity:.96}
+    .rep__meta{text-align:right;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist);opacity:.7;line-height:1.9}
+    .rep__title{margin:clamp(40px,6vw,64px) 0 0;font-family:var(--serif);font-weight:400;color:var(--ivory);font-size:clamp(36px,5.5vw,68px);line-height:1.08}
+    .rep__lede{margin:22px 0 0;max-width:60ch;font-size:clamp(16px,1.1vw,18px);color:var(--mist)}
+
+    /* HERO METRIC */
+    .headline-metric{margin:clamp(44px,6vw,64px) 0 0;padding:clamp(28px,4vw,40px);background:linear-gradient(135deg,rgba(175,143,71,.10),rgba(175,143,71,.02));border:1px solid rgba(175,143,71,.28);border-radius:4px}
+    .headline-metric p{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+    .headline-metric strong{display:block;margin-top:8px;font-family:var(--serif);font-weight:400;color:var(--ivory);font-size:clamp(34px,6vw,68px);line-height:1.05}
+    .headline-metric span{display:block;margin-top:14px;color:var(--mist);font-size:15px;max-width:58ch}
+
+    /* SECTIONS */
+    section{padding:clamp(48px,7vw,88px) 0}
+    .sec-head{margin-bottom:clamp(28px,4vw,44px)}
+    .sec-head h2{margin-top:14px;font-family:var(--serif);font-weight:400;color:var(--ivory);font-size:clamp(26px,3.4vw,42px);line-height:1.15}
+
+    /* KPI GRID */
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+    .kpi{background:var(--navy);padding:clamp(20px,3vw,30px)}
+    .kpi__num{font-family:var(--serif);font-size:clamp(28px,3.6vw,44px);color:var(--ivory);line-height:1}
+    .kpi__lbl{margin-top:10px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.85}
+    .kpi__sub{margin-top:4px;font-size:13px;color:var(--mist);opacity:.7}
+    @media(max-width:780px){.kpis{grid-template-columns:repeat(2,1fr)}}
+
+    /* TABLE */
+    .tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+    .tbl thead th{text-align:right;padding:14px 12px;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(175,143,71,.3);font-weight:600}
+    .tbl thead th:first-child{text-align:left}
+    .tbl tbody td{padding:16px 12px;text-align:right;border-bottom:1px solid var(--line);color:var(--ivory)}
+    .tbl tbody td:first-child{text-align:left}
+    .tbl .area{font-family:var(--serif);font-size:16px}
+    .tbl .muted{color:var(--mist);opacity:.6;font-size:13px}
+    .badge{display:inline-block;margin-left:8px;padding:2px 8px;font-size:10px;letter-spacing:1px;text-transform:uppercase;border-radius:99px;background:rgba(175,143,71,.18);color:var(--gold-soft);vertical-align:middle}
+    .badge--off{background:rgba(201,207,221,.12);color:var(--mist)}
+    .tbl tfoot td{padding:16px 12px;text-align:right;border-top:1px solid rgba(175,143,71,.3);color:var(--gold-soft);font-weight:600}
+    .tbl tfoot td:first-child{text-align:left}
+    .tbl-scroll{overflow-x:auto}
+    @media(max-width:680px){.tbl{font-size:13px}.tbl thead th,.tbl tbody td,.tbl tfoot td{padding:11px 7px}}
+
+    /* KEYWORDS */
+    .kw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .kw{padding:20px;border:1px solid var(--line);border-radius:4px;background:rgba(255,255,255,.015)}
+    .kw__term{font-family:var(--serif);font-size:17px;color:var(--ivory)}
+    .kw__data{margin-top:10px;font-size:13px;color:var(--mist);display:flex;gap:16px}
+    .kw__data b{color:var(--gold-soft);font-weight:600}
+    @media(max-width:780px){.kw-grid{grid-template-columns:1fr}}
+
+    /* INSIGHTS */
+    .insight{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+    .insight:last-child{border-bottom:0}
+    .insight__n{font-family:var(--serif);font-size:26px;color:var(--gold);line-height:1;min-width:42px}
+    .insight__b h3{font-family:var(--serif);font-weight:400;color:var(--ivory);font-size:19px;margin-bottom:6px}
+    .insight__b p{color:var(--mist);font-size:15px}
+
+    /* NEXT STEPS */
+    .steps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .step{padding:24px;border:1px solid rgba(175,143,71,.22);border-radius:4px;background:linear-gradient(135deg,rgba(175,143,71,.06),transparent)}
+    .step h3{font-family:var(--serif);font-weight:400;color:var(--ivory);font-size:18px;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+    .step h3::before{content:"";width:7px;height:7px;background:var(--gold);transform:rotate(45deg);flex:none}
+    .step p{color:var(--mist);font-size:14.5px}
+    @media(max-width:680px){.steps{grid-template-columns:1fr}}
+
+    /* FOOTER */
+    footer.rep{padding:clamp(40px,6vw,72px) 0;text-align:center}
+    footer.rep img{width:230px;margin:0 auto 22px;opacity:.9}
+    footer.rep .loc{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);opacity:.8}
+    footer.rep .disc{margin:24px auto 0;max-width:62ch;font-size:12px;color:var(--mist);opacity:.55;line-height:1.7}
+    footer.rep .by{margin-top:20px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist);opacity:.6}
+  </style>
+</head>
+<body>
+
+<header class="rep">
+  <div class="wrap">
+    <div class="rep__top">
+      <img src="../brand/svg/soares-melo-editorial-ouro.svg" alt="Soares e Melo Advocacia" width="200" height="86" />
+      <div class="rep__meta">
+        Relatório nº 03 · Maio–Julho 2026<br />
+        Google Ads · Rede de Pesquisa<br />
+        Belo Horizonte · MG
+      </div>
+    </div>
+
+    <div class="report-switch">
+      <span class="report-switch__lbl">Histórico de relatórios</span>
+      <select onchange="if(this.value)location.href=this.value" aria-label="Selecionar relatório">
+        <option value="/report/" selected>Relatório nº 03 · atual</option>
+        <option value="/report/02/">Relatório nº 02</option>
+        <option value="/report/01/">Relatório nº 01</option>
+      </select>
+    </div>
+
+    <h1 class="rep__title">Relatório de<br /><em>desempenho</em> das campanhas.</h1>
+    <p class="rep__lede">Um panorama claro de para onde foi cada real investido e quantos contatos qualificados ele trouxe. Sem jargão de mídia — só o que importa para o escritório.</p>
+
+    <div class="headline-metric">
+      <p>O número que resume o período</p>
+      <strong>R$ 3.962 investidos · R$ 24.394 em contratos</strong>
+      <span>O investimento em mídia gerou 196 contatos e <em>4 contratos já assinados</em>, somando R$ 24.394,00 em honorários — um retorno de mais de 6× sobre o valor aplicado (ROAS 6,1×). E a maioria dos contatos ainda segue em negociação.</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Visão geral</span>
+      <h2>Os números do período.</h2>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi">
+        <div class="kpi__num" data-count="3961" data-prefix="R$ " data-dec=",91">R$ 3.961,59</div>
+        <div class="kpi__lbl">Investimento</div>
+        <div class="kpi__sub">Total aplicado em mídia</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num" data-count="196">196</div>
+        <div class="kpi__lbl">Contatos gerados</div>
+        <div class="kpi__sub">Pessoas que pediram contato</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num" data-count="896">896</div>
+        <div class="kpi__lbl">Cliques no site</div>
+        <div class="kpi__sub">Visitas vindas dos anúncios</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num">28.230</div>
+        <div class="kpi__lbl">Pessoas alcançadas</div>
+        <div class="kpi__sub">Vezes que o anúncio apareceu</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num">21,88%</div>
+        <div class="kpi__lbl">Taxa de conversão</div>
+        <div class="kpi__sub">Dos cliques viram contato</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num">3,17%</div>
+        <div class="kpi__lbl">Taxa de cliques (CTR)</div>
+        <div class="kpi__sub">Quem vê e clica no anúncio</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num">R$ 4,42</div>
+        <div class="kpi__lbl">Custo por clique</div>
+        <div class="kpi__sub">Valor médio de cada visita</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num">R$ 20,21</div>
+        <div class="kpi__lbl">Custo por contato</div>
+        <div class="kpi__sub">Quanto custa cada lead</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hair" />
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Métricas financeiras</span>
+      <h2>Do clique ao <em>contrato assinado</em>.</h2>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi">
+        <div class="kpi__num">R$ 24.394</div>
+        <div class="kpi__lbl">Receita contratada</div>
+        <div class="kpi__sub">Soma dos 4 contratos</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num">6,1×</div>
+        <div class="kpi__lbl">ROAS</div>
+        <div class="kpi__sub">Retorno sobre o investimento</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num" data-count="990" data-prefix="R$ ">R$ 990</div>
+        <div class="kpi__lbl">CAC</div>
+        <div class="kpi__sub">Custo por cliente fechado</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num" data-count="4">4</div>
+        <div class="kpi__lbl">Contratos fechados</div>
+        <div class="kpi__sub">De 196 contatos gerados</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num">R$ 6.099</div>
+        <div class="kpi__lbl">Ticket médio</div>
+        <div class="kpi__sub">Valor médio por contrato</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num">3,6%</div>
+        <div class="kpi__lbl">Taxa de fechamento</div>
+        <div class="kpi__sub">Contatos que viraram cliente</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num">R$ 1.092</div>
+        <div class="kpi__lbl">Recebido até agora</div>
+        <div class="kpi__sub">Restante parcelado a receber</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__num">R$ 20.432</div>
+        <div class="kpi__lbl">Retorno líquido</div>
+        <div class="kpi__sub">Contratado menos investido</div>
+      </div>
+    </div>
+
+    <div class="headline-metric" style="margin-top:28px">
+      <p>O que significam ROAS e CAC</p>
+      <span style="margin-top:0"><strong style="font-size:16px;font-family:var(--sans);color:var(--gold-soft);display:inline">ROAS 6,1×</strong> &nbsp;=&nbsp; para cada R$ 1,00 investido em anúncio, o escritório fechou R$ 6,15 em honorários contratados. &nbsp;·&nbsp; <strong style="font-size:16px;font-family:var(--sans);color:var(--gold-soft);display:inline">CAC R$ 990</strong> &nbsp;=&nbsp; é quanto custou, em mídia, conquistar cada novo cliente — frente a um ticket médio de R$ 6.099.</span>
+    </div>
+
+    <div class="tbl-scroll" style="margin-top:28px">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Contrato</th>
+            <th>Data</th>
+            <th>Área</th>
+            <th>Valor contratado</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="area">Contrato 01</td>
+            <td>02/06/2026</td><td class="muted">Usucapião e Imobiliário</td><td>R$ 8.100,00</td>
+            <td><span class="badge">Pagando · 1/12</span></td>
+          </tr>
+          <tr>
+            <td class="area">Contrato 02</td>
+            <td>Jun/2026</td><td class="muted">Família · Pensão</td><td>R$ 7.294,00</td>
+            <td><span class="badge badge--off">A receber</span></td>
+          </tr>
+          <tr>
+            <td class="area">Contrato 03</td>
+            <td>18/05/2026</td><td class="muted">Família</td><td>R$ 5.000,00</td>
+            <td><span class="badge">Pagando · 1/12</span></td>
+          </tr>
+          <tr>
+            <td class="area">Contrato 04</td>
+            <td>27/05/2026</td><td class="muted">Usucapião e Imobiliário</td><td>R$ 4.000,00</td>
+            <td><span class="badge badge--off">A receber · 0/11</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total contratado</td>
+            <td></td><td></td><td>R$ 24.394,00</td><td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+
+<hr class="hair" />
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Por área de atuação</span>
+      <h2>Onde o investimento <em>rendeu</em> mais.</h2>
+    </div>
+
+    <div class="tbl-scroll">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Área</th>
+            <th>Investido</th>
+            <th>Cliques</th>
+            <th>Contatos</th>
+            <th>Conversão</th>
+            <th>Custo / contato</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="area">Direito de Família <span class="badge">Menor custo/lead</span></td>
+            <td>R$ 918,22</td><td>270</td><td>89</td><td>32,96%</td><td>R$ 10,32</td>
+          </tr>
+          <tr>
+            <td class="area">Usucapião e Imobiliário <span class="badge">Maior ticket</span></td>
+            <td>R$ 1.394,00</td><td>234</td><td>38</td><td>16,24%</td><td>R$ 36,68</td>
+          </tr>
+          <tr>
+            <td class="area">Obrigações &amp; Resp. Civil</td>
+            <td>R$ 551,48</td><td>137</td><td>27</td><td>19,71%</td><td>R$ 20,43</td>
+          </tr>
+          <tr>
+            <td class="area">Direito das Sucessões</td>
+            <td>R$ 668,50</td><td>146</td><td>27</td><td>18,49%</td><td>R$ 24,76</td>
+          </tr>
+          <tr>
+            <td class="area">Parte Geral · Pessoas <span class="badge badge--off">Pausada</span></td>
+            <td>R$ 254,13</td><td>59</td><td>9</td><td>15,25%</td><td>R$ 28,24</td>
+          </tr>
+          <tr>
+            <td class="area">Direito Contratual <span class="badge badge--off">Pausada</span></td>
+            <td>R$ 175,26</td><td>50</td><td>6</td><td>12,00%</td><td>R$ 29,21</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total do período</td>
+            <td>R$ 3.961,59</td><td>576</td><td>112</td><td>21,88%</td><td>R$ 20,21</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+
+<hr class="hair" />
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Destaques</span>
+      <h2>As buscas que mais <em>trouxeram</em> clientes.</h2>
+    </div>
+
+    <div class="kw-grid">
+      <div class="kw"><div class="kw__term">“advogado familia”</div><div class="kw__data"><span><b>Família</b></span><span>mais leads</span></div></div>
+      <div class="kw"><div class="kw__term">“advogado direito imobiliário”</div><div class="kw__data"><span><b>Usucapião</b></span><span>maior ticket</span></div></div>
+      <div class="kw"><div class="kw__term">“pensão alimentícia advogado”</div><div class="kw__data"><span><b>Família</b></span><span>fechou contrato</span></div></div>
+      <div class="kw"><div class="kw__term">“advogado indenização”</div><div class="kw__data"><span><b>Obrigações</b></span><span>boa conversão</span></div></div>
+      <div class="kw"><div class="kw__term">“guarda dos filhos”</div><div class="kw__data"><span><b>Família</b></span><span>alta conversão</span></div></div>
+      <div class="kw"><div class="kw__term">“advogado inventário bh”</div><div class="kw__data"><span><b>Sucessões</b></span><span>volume constante</span></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="hair" />
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Leitura do período</span>
+      <h2>O que os números <em>dizem</em>.</h2>
+    </div>
+
+    <div class="insight">
+      <div class="insight__n">I</div>
+      <div class="insight__b">
+        <h3>Cada R$ 1 investido voltou como mais de R$ 9 contratados.</h3>
+        <p>O período acumula 4 contratos (R$ 24.394,00 em honorários) frente a R$ 3.961,59 de investimento — ROAS de 9,7×. E isso com a maioria dos 196 contatos ainda em negociação: o retorno tende a crescer conforme o pipeline amadurece.</p>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight__n">II</div>
+      <div class="insight__b">
+        <h3>Família é a área mais completa.</h3>
+        <p>Direito de Família trouxe 41 dos 196 contatos, ao menor custo por contato (R$ 10,32) e com a maior taxa de conversão (32,96%) — e fechou 2 contratos somando R$ 12.294. Lidera ao mesmo tempo em volume de leads e em receita.</p>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight__n">III</div>
+      <div class="insight__b">
+        <h3>As campanhas continuam limitadas pelo orçamento.</h3>
+        <p>Todas as áreas ativas seguem marcadas como “limitadas pelo orçamento” — há mais gente buscando do que conseguimos atender com a verba atual. Aumentar o orçamento tende a trazer mais contatos ao mesmo custo.</p>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight__n">IV</div>
+      <div class="insight__b">
+        <h3>O lead mais caro entrega os maiores contratos.</h3>
+        <p>Usucapião e Imobiliário tem o maior custo por contato (R$ 36,68), mas fecha os contratos de maior valor: R$ 8.100 (o maior do período) e R$ 4.000, somando R$ 12.100 em 2 contratos. Com R$ 1.394 investidos, é um ROAS de 8,6× na área. O lead custa mais, mas vale muito mais.</p>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight__n">V</div>
+      <div class="insight__b">
+        <h3>Concentramos a verba no que converte.</h3>
+        <p>As campanhas de Parte Geral e Contratual foram pausadas para redirecionar o orçamento às áreas de maior retorno (Família e Imobiliário), e seguimos bloqueando buscas fora do escopo (“advogados gratuitos”, defensoria, temas trabalhistas) para não desperdiçar verba.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hair" />
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Próximos passos</span>
+      <h2>O plano para o <em>próximo</em> período.</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <h3>Reforçar Família e Imobiliário</h3>
+        <p>As duas áreas que já fecharam contrato (2 cada). Família entrega leads baratos em volume; Imobiliário entrega os contratos de maior valor. Concentrar verba onde o retorno já apareceu.</p>
+      </div>
+      <div class="step">
+        <h3>Ampliar a verba das campanhas limitadas</h3>
+        <p>Como há demanda represada, um aumento de orçamento tende a trazer mais contatos mantendo o custo por contato atual.</p>
+      </div>
+      <div class="step">
+        <h3>Escalar onde o ticket é alto</h3>
+        <p>Usucapião e Imobiliário fecha os maiores contratos do escritório. Mesmo com o lead mais caro, o retorno por contrato compensa com folga — vale aumentar o investimento.</p>
+      </div>
+      <div class="step">
+        <h3>Reavaliar campanhas pausadas</h3>
+        <p>Decidir, junto ao escritório, se Parte Geral e Contratual voltam ao ar com nova estratégia de palavras-chave ou se a verba segue concentrada nas áreas líderes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hair" />
+
+<footer class="rep">
+  <div class="wrap">
+    <img src="../brand/svg/soares-melo-editorial-ouro.svg" alt="Soares e Melo Advocacia" width="230" height="98" />
+    <p class="loc">Belo Horizonte · Minas Gerais</p>
+    <p class="disc">Relatório de desempenho de campanhas de mídia paga (Google Ads) — nº 03, referente a maio–julho de 2026. “Contatos” representam solicitações de contato/leads registrados. Os valores de honorários e a métrica de ROAS referem-se aos contratos assinados informados pelo escritório; o ROAS considera o valor contratado, parte ainda a receber de forma parcelada.</p>
+    <p class="by">Gestão de tráfego · Viana Mídias</p>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('[data-count]');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const el = e.target; io.unobserve(el);
+      const end = +el.dataset.count, pre = el.dataset.prefix||'', dec = el.dataset.dec||'';
+      let cur = 0; const step = end/60;
+      const tick = ()=>{
+        cur += step;
+        if(cur < end){ el.textContent = pre + Math.floor(cur).toLocaleString('pt-BR') + (dec?'':''); requestAnimationFrame(tick); }
+        else { el.textContent = pre + end.toLocaleString('pt-BR') + dec; }
+      };
+      tick();
+    });
+  },{threshold:.4});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
