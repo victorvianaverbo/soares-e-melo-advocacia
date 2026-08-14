@@ -78,6 +78,16 @@
     .tbl-scroll{overflow-x:auto}
     @media(max-width:680px){.tbl{font-size:13px}.tbl thead th,.tbl tbody td,.tbl tfoot td{padding:11px 7px}}
 
+    
+    /* MONTHLY EVOLUTION */
+    .monthly-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px}
+    .month-card{padding:24px;background:linear-gradient(135deg, rgba(255,255,255,.03), transparent);border:1px solid rgba(201,207,221,.1);border-radius:4px;text-align:center}
+    .month-card__title{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .month-card__data{display:flex;flex-direction:column;gap:8px}
+    .month-card__metric{display:flex;justify-content:space-between;align-items:center;font-size:14.5px;color:var(--ivory)}
+    .month-card__metric span{color:var(--mist);font-size:13px}
+    @media(max-width:680px){.monthly-grid{grid-template-columns:1fr}}
+
     /* KEYWORDS */
     .kw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .kw{padding:20px;border:1px solid var(--line);border-radius:4px;background:rgba(255,255,255,.015)}
@@ -116,7 +126,7 @@
     <div class="rep__top">
       <img src="../../brand/svg/soares-melo-editorial-ouro.svg" alt="Soares e Melo Advocacia" width="200" height="86" />
       <div class="rep__meta">
-        Relatório nº 02 · Maio–Jun 2026<br />
+        Relatório nº 03 · Maio–Julho 2026<br />
         Google Ads · Rede de Pesquisa<br />
         Belo Horizonte · MG
       </div>
@@ -126,8 +136,8 @@
       <span class="report-switch__lbl">Histórico de relatórios</span>
       <select onchange="if(this.value)location.href=this.value" aria-label="Selecionar relatório">
         <option value="/report/">Relatório nº 04 · atual</option>
-        <option value="/report/03/">Relatório nº 03</option>
-        <option value="/report/02/" selected>Relatório nº 02</option>
+        <option value="/report/03/" selected>Relatório nº 03</option>
+        <option value="/report/02/">Relatório nº 02</option>
         <option value="/report/01/">Relatório nº 01</option>
       </select>
     </div>
@@ -137,8 +147,8 @@
 
     <div class="headline-metric">
       <p>O número que resume o período</p>
-      <strong>R$ 2.523 investidos · R$ 24.394 em contratos</strong>
-      <span>O investimento em mídia gerou 112 contatos e <em>4 contratos já assinados</em>, somando R$ 24.394,00 em honorários — um retorno de mais de 9× sobre o valor aplicado (ROAS 9,7×). E a maioria dos contatos ainda segue em negociação.</span>
+      <strong>R$ 3.962 investidos · R$ 24.394 em contratos</strong>
+      <span>O investimento em mídia gerou 196 contatos e <em>4 contratos já assinados</em>, somando R$ 24.394,00 em honorários — um retorno de mais de 6× sobre o valor aplicado (ROAS 6,1×). E a maioria dos contatos ainda segue em negociação.</span>
     </div>
   </div>
 </header>
@@ -152,42 +162,42 @@
 
     <div class="kpis">
       <div class="kpi">
-        <div class="kpi__num" data-count="2523" data-prefix="R$ " data-dec=",91">R$ 2.523,91</div>
+        <div class="kpi__num" data-count="3961" data-prefix="R$ " data-dec=",91">R$ 3.961,59</div>
         <div class="kpi__lbl">Investimento</div>
         <div class="kpi__sub">Total aplicado em mídia</div>
       </div>
       <div class="kpi">
-        <div class="kpi__num" data-count="112">112</div>
+        <div class="kpi__num" data-count="196">196</div>
         <div class="kpi__lbl">Contatos gerados</div>
         <div class="kpi__sub">Pessoas que pediram contato</div>
       </div>
       <div class="kpi">
-        <div class="kpi__num" data-count="576">576</div>
+        <div class="kpi__num" data-count="896">896</div>
         <div class="kpi__lbl">Cliques no site</div>
         <div class="kpi__sub">Visitas vindas dos anúncios</div>
       </div>
       <div class="kpi">
-        <div class="kpi__num">18.064</div>
+        <div class="kpi__num">28.230</div>
         <div class="kpi__lbl">Pessoas alcançadas</div>
         <div class="kpi__sub">Vezes que o anúncio apareceu</div>
       </div>
       <div class="kpi">
-        <div class="kpi__num">19,44%</div>
+        <div class="kpi__num">21,88%</div>
         <div class="kpi__lbl">Taxa de conversão</div>
         <div class="kpi__sub">Dos cliques viram contato</div>
       </div>
       <div class="kpi">
-        <div class="kpi__num">3,19%</div>
+        <div class="kpi__num">3,17%</div>
         <div class="kpi__lbl">Taxa de cliques (CTR)</div>
         <div class="kpi__sub">Quem vê e clica no anúncio</div>
       </div>
       <div class="kpi">
-        <div class="kpi__num">R$ 4,38</div>
+        <div class="kpi__num">R$ 4,42</div>
         <div class="kpi__lbl">Custo por clique</div>
         <div class="kpi__sub">Valor médio de cada visita</div>
       </div>
       <div class="kpi">
-        <div class="kpi__num">R$ 22,53</div>
+        <div class="kpi__num">R$ 20,21</div>
         <div class="kpi__lbl">Custo por contato</div>
         <div class="kpi__sub">Quanto custa cada lead</div>
       </div>
@@ -196,6 +206,42 @@
 </section>
 
 <hr class="hair" />
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Evolução Mensal</span>
+      <h2>Crescimento e <em>otimização</em>.</h2>
+    </div>
+
+    <div class="monthly-grid">
+      <div class="month-card">
+        <div class="month-card__title">Maio 2026</div>
+        <div class="month-card__data">
+          <div class="month-card__metric"><span>Investido</span> <b>R$ 1.670,00</b></div>
+          <div class="month-card__metric"><span>Contatos</span> <b>59</b></div>
+          <div class="month-card__metric"><span>Custo / Contato</span> <b>R$ 28,30</b></div>
+        </div>
+      </div>
+      <div class="month-card">
+        <div class="month-card__title">Junho 2026</div>
+        <div class="month-card__data">
+          <div class="month-card__metric"><span>Investido</span> <b>R$ 853,91</b></div>
+          <div class="month-card__metric"><span>Contatos</span> <b>53</b></div>
+          <div class="month-card__metric"><span>Custo / Contato</span> <b style="color:var(--gold-soft)">R$ 16,11</b></div>
+        </div>
+      </div>
+      <div class="month-card">
+        <div class="month-card__title">Julho 2026</div>
+        <div class="month-card__data">
+          <div class="month-card__metric"><span>Investido</span> <b>R$ 1.437,68</b></div>
+          <div class="month-card__metric"><span>Contatos</span> <b>84</b></div>
+          <div class="month-card__metric"><span>Custo / Contato</span> <b style="color:var(--gold-soft)">R$ 17,11</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="wrap">
@@ -211,19 +257,19 @@
         <div class="kpi__sub">Soma dos 4 contratos</div>
       </div>
       <div class="kpi">
-        <div class="kpi__num">9,7×</div>
+        <div class="kpi__num">6,1×</div>
         <div class="kpi__lbl">ROAS</div>
         <div class="kpi__sub">Retorno sobre o investimento</div>
       </div>
       <div class="kpi">
-        <div class="kpi__num" data-count="631" data-prefix="R$ ">R$ 631</div>
+        <div class="kpi__num" data-count="990" data-prefix="R$ ">R$ 990</div>
         <div class="kpi__lbl">CAC</div>
         <div class="kpi__sub">Custo por cliente fechado</div>
       </div>
       <div class="kpi">
         <div class="kpi__num" data-count="4">4</div>
         <div class="kpi__lbl">Contratos fechados</div>
-        <div class="kpi__sub">De 112 contatos gerados</div>
+        <div class="kpi__sub">De 196 contatos gerados</div>
       </div>
       <div class="kpi">
         <div class="kpi__num">R$ 6.099</div>
@@ -241,7 +287,7 @@
         <div class="kpi__sub">Restante parcelado a receber</div>
       </div>
       <div class="kpi">
-        <div class="kpi__num">R$ 21.870</div>
+        <div class="kpi__num">R$ 20.432</div>
         <div class="kpi__lbl">Retorno líquido</div>
         <div class="kpi__sub">Contratado menos investido</div>
       </div>
@@ -249,7 +295,7 @@
 
     <div class="headline-metric" style="margin-top:28px">
       <p>O que significam ROAS e CAC</p>
-      <span style="margin-top:0"><strong style="font-size:16px;font-family:var(--sans);color:var(--gold-soft);display:inline">ROAS 9,7×</strong> &nbsp;=&nbsp; para cada R$ 1,00 investido em anúncio, o escritório fechou R$ 9,67 em honorários contratados. &nbsp;·&nbsp; <strong style="font-size:16px;font-family:var(--sans);color:var(--gold-soft);display:inline">CAC R$ 631</strong> &nbsp;=&nbsp; é quanto custou, em mídia, conquistar cada novo cliente — frente a um ticket médio de R$ 6.099.</span>
+      <span style="margin-top:0"><strong style="font-size:16px;font-family:var(--sans);color:var(--gold-soft);display:inline">ROAS 6,1×</strong> &nbsp;=&nbsp; para cada R$ 1,00 investido em anúncio, o escritório fechou R$ 6,15 em honorários contratados. &nbsp;·&nbsp; <strong style="font-size:16px;font-family:var(--sans);color:var(--gold-soft);display:inline">CAC R$ 990</strong> &nbsp;=&nbsp; é quanto custou, em mídia, conquistar cada novo cliente — frente a um ticket médio de R$ 6.099.</span>
     </div>
 
     <div class="tbl-scroll" style="margin-top:28px">
@@ -320,19 +366,19 @@
         <tbody>
           <tr>
             <td class="area">Direito de Família <span class="badge">Menor custo/lead</span></td>
-            <td>R$ 504,20</td><td>142</td><td>41</td><td>28,87%</td><td>R$ 12,30</td>
+            <td>R$ 918,22</td><td>270</td><td>89</td><td>32,96%</td><td>R$ 10,32</td>
           </tr>
           <tr>
             <td class="area">Usucapião e Imobiliário <span class="badge">Maior ticket</span></td>
-            <td>R$ 792,77</td><td>141</td><td>22</td><td>15,60%</td><td>R$ 36,03</td>
+            <td>R$ 1.394,00</td><td>234</td><td>38</td><td>16,24%</td><td>R$ 36,68</td>
           </tr>
           <tr>
             <td class="area">Obrigações &amp; Resp. Civil</td>
-            <td>R$ 340,17</td><td>85</td><td>18</td><td>21,18%</td><td>R$ 18,90</td>
+            <td>R$ 551,48</td><td>137</td><td>27</td><td>19,71%</td><td>R$ 20,43</td>
           </tr>
           <tr>
             <td class="area">Direito das Sucessões</td>
-            <td>R$ 457,39</td><td>99</td><td>16</td><td>16,16%</td><td>R$ 28,59</td>
+            <td>R$ 668,50</td><td>146</td><td>27</td><td>18,49%</td><td>R$ 24,76</td>
           </tr>
           <tr>
             <td class="area">Parte Geral · Pessoas <span class="badge badge--off">Pausada</span></td>
@@ -346,7 +392,7 @@
         <tfoot>
           <tr>
             <td>Total do período</td>
-            <td>R$ 2.523,91</td><td>576</td><td>112</td><td>19,44%</td><td>R$ 22,53</td>
+            <td>R$ 3.961,59</td><td>576</td><td>112</td><td>21,88%</td><td>R$ 20,21</td>
           </tr>
         </tfoot>
       </table>
@@ -364,12 +410,12 @@
     </div>
 
     <div class="kw-grid">
-      <div class="kw"><div class="kw__term">“guarda dos filhos”</div><div class="kw__data"><span><b>Família</b></span><span>alta conversão</span></div></div>
-      <div class="kw"><div class="kw__term">“pensão alimentícia advogado”</div><div class="kw__data"><span><b>Família</b></span><span>fechou contrato</span></div></div>
+      <div class="kw"><div class="kw__term">“advogado familia”</div><div class="kw__data"><span><b>Família</b></span><span>mais leads</span></div></div>
       <div class="kw"><div class="kw__term">“advogado direito imobiliário”</div><div class="kw__data"><span><b>Usucapião</b></span><span>maior ticket</span></div></div>
-      <div class="kw"><div class="kw__term">“como fazer inventário”</div><div class="kw__data"><span><b>Sucessões</b></span><span>volume constante</span></div></div>
+      <div class="kw"><div class="kw__term">“pensão alimentícia advogado”</div><div class="kw__data"><span><b>Família</b></span><span>fechou contrato</span></div></div>
       <div class="kw"><div class="kw__term">“advogado indenização”</div><div class="kw__data"><span><b>Obrigações</b></span><span>boa conversão</span></div></div>
-      <div class="kw"><div class="kw__term">“regularizar imóvel”</div><div class="kw__data"><span><b>Usucapião</b></span><span>alto valor</span></div></div>
+      <div class="kw"><div class="kw__term">“guarda dos filhos”</div><div class="kw__data"><span><b>Família</b></span><span>alta conversão</span></div></div>
+      <div class="kw"><div class="kw__term">“advogado inventário bh”</div><div class="kw__data"><span><b>Sucessões</b></span><span>volume constante</span></div></div>
     </div>
   </div>
 </section>
@@ -387,14 +433,14 @@
       <div class="insight__n">I</div>
       <div class="insight__b">
         <h3>Cada R$ 1 investido voltou como mais de R$ 9 contratados.</h3>
-        <p>O período acumula 4 contratos (R$ 24.394,00 em honorários) frente a R$ 2.523,91 de investimento — ROAS de 9,7×. E isso com a maioria dos 112 contatos ainda em negociação: o retorno tende a crescer conforme o pipeline amadurece.</p>
+        <p>O período acumula 4 contratos (R$ 24.394,00 em honorários) frente a R$ 3.961,59 de investimento — ROAS de 9,7×. E isso com a maioria dos 196 contatos ainda em negociação: o retorno tende a crescer conforme o pipeline amadurece.</p>
       </div>
     </div>
     <div class="insight">
       <div class="insight__n">II</div>
       <div class="insight__b">
         <h3>Família é a área mais completa.</h3>
-        <p>Direito de Família trouxe 41 dos 112 contatos, ao menor custo por contato (R$ 12,30) e com a maior taxa de conversão (28,87%) — e fechou 2 contratos somando R$ 12.294. Lidera ao mesmo tempo em volume de leads e em receita.</p>
+        <p>Direito de Família trouxe 41 dos 196 contatos, ao menor custo por contato (R$ 10,32) e com a maior taxa de conversão (32,96%) — e fechou 2 contratos somando R$ 12.294. Lidera ao mesmo tempo em volume de leads e em receita.</p>
       </div>
     </div>
     <div class="insight">
@@ -408,7 +454,7 @@
       <div class="insight__n">IV</div>
       <div class="insight__b">
         <h3>O lead mais caro entrega os maiores contratos.</h3>
-        <p>Usucapião e Imobiliário tem o maior custo por contato (R$ 36,03), mas fecha os contratos de maior valor: R$ 8.100 (o maior do período) e R$ 4.000, somando R$ 12.100 em 2 contratos. Com R$ 793 investidos, é um ROAS de 15× na área. O lead custa mais, mas vale muito mais.</p>
+        <p>Usucapião e Imobiliário tem o maior custo por contato (R$ 36,68), mas fecha os contratos de maior valor: R$ 8.100 (o maior do período) e R$ 4.000, somando R$ 12.100 em 2 contratos. Com R$ 1.394 investidos, é um ROAS de 8,6× na área. O lead custa mais, mas vale muito mais.</p>
       </div>
     </div>
     <div class="insight">
@@ -457,7 +503,7 @@
   <div class="wrap">
     <img src="../../brand/svg/soares-melo-editorial-ouro.svg" alt="Soares e Melo Advocacia" width="230" height="98" />
     <p class="loc">Belo Horizonte · Minas Gerais</p>
-    <p class="disc">Relatório de desempenho de campanhas de mídia paga (Google Ads) — nº 02, referente a maio–junho de 2026. “Contatos” representam solicitações de contato/leads registrados. Os valores de honorários e a métrica de ROAS referem-se aos contratos assinados informados pelo escritório; o ROAS considera o valor contratado, parte ainda a receber de forma parcelada.</p>
+    <p class="disc">Relatório de desempenho de campanhas de mídia paga (Google Ads) — nº 03, referente a maio–julho de 2026. “Contatos” representam solicitações de contato/leads registrados. Os valores de honorários e a métrica de ROAS referem-se aos contratos assinados informados pelo escritório; o ROAS considera o valor contratado, parte ainda a receber de forma parcelada.</p>
     <p class="by">Gestão de tráfego · Viana Mídias</p>
   </div>
 </footer>
