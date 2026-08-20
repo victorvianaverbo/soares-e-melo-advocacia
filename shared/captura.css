@@ -1,0 +1,197 @@
+/* Popup de captura de lead — Soares e Melo Advocacia
+   Usa os tokens de :root do site (style.css / shared/base.css). */
+
+.lead-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+
+/* o display do .lead-modal venceria o atributo hidden, e o popup
+   apareceria com o JavaScript desligado */
+.lead-modal[hidden] { display: none; }
+
+.lead-modal.is-open { opacity: 1; }
+
+body.has-lead-modal { overflow: hidden; }
+
+.lead-modal__fundo {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 21, 56, 0.82);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.lead-modal__caixa {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: clamp(28px, 5vw, 44px);
+  background: var(--navy, #0F1E4A);
+  border: 1px solid rgba(175, 143, 71, 0.34);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  transform: translateY(14px);
+  transition: transform 260ms ease;
+}
+
+.lead-modal.is-open .lead-modal__caixa { transform: translateY(0); }
+
+.lead-modal__x {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  color: var(--mist, #C9CFDD);
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.lead-modal__x:hover,
+.lead-modal__x:focus-visible {
+  color: var(--gold-soft, #C9A55D);
+  border-color: rgba(175, 143, 71, 0.34);
+  outline: none;
+}
+
+.lead-modal__ornamento {
+  color: var(--gold, #AF8F47);
+  font-size: 13px;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.lead-modal__titulo {
+  margin: 0 0 10px;
+  font-family: var(--serif, Georgia, serif);
+  font-weight: 400;
+  font-size: clamp(23px, 3.4vw, 29px);
+  line-height: 1.2;
+  color: var(--ivory, #F5EFE0);
+}
+
+.lead-modal__lede {
+  margin: 0 0 26px;
+  font-family: var(--sans, system-ui, sans-serif);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--mist, #C9CFDD);
+}
+
+.lead-modal__campo { margin-bottom: 18px; }
+
+.lead-modal__campo label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--sans, system-ui, sans-serif);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--gold, #AF8F47);
+}
+
+.lead-modal__campo input {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: var(--sans, system-ui, sans-serif);
+  font-size: 15px;
+  color: var(--ivory, #F5EFE0);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 207, 221, 0.18);
+  border-radius: 0;
+  transition: border-color 180ms ease, background 180ms ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.lead-modal__campo input::placeholder {
+  color: var(--mist, #C9CFDD);
+  opacity: 0.45;
+}
+
+.lead-modal__campo input:focus {
+  outline: none;
+  border-color: var(--gold, #AF8F47);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.lead-modal__campo input[aria-invalid="true"] {
+  border-color: #C2564B;
+}
+
+.lead-modal__erro {
+  display: block;
+  margin-top: 7px;
+  font-family: var(--sans, system-ui, sans-serif);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #E08A80;
+}
+
+.lead-modal__erro[hidden] { display: none; }
+
+.lead-modal__enviar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 6px;
+  padding: 16px 20px;
+  font-family: var(--sans, system-ui, sans-serif);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: var(--navy-deep, #0A1538);
+  background: var(--gold, #AF8F47);
+  border: 1px solid var(--gold, #AF8F47);
+  cursor: pointer;
+  transition: background 200ms ease, border-color 200ms ease;
+}
+
+.lead-modal__enviar:hover:not(:disabled),
+.lead-modal__enviar:focus-visible:not(:disabled) {
+  background: var(--gold-soft, #C9A55D);
+  border-color: var(--gold-soft, #C9A55D);
+  outline: none;
+}
+
+.lead-modal__enviar:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.lead-modal__apoio {
+  margin: 18px 0 0;
+  font-family: var(--sans, system-ui, sans-serif);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--mist, #C9CFDD);
+  opacity: 0.6;
+}
+
+@media (max-width: 420px) {
+  .lead-modal { padding: 12px; }
+  .lead-modal__caixa { max-height: calc(100vh - 24px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lead-modal,
+  .lead-modal__caixa { transition: none; }
+}
